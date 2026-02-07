@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeSiteSetup - Custom Merch Made Easy for Small Businesses</title>
+    <style>
+        /* (keeping your full CSS unchanged — only showing relevant modified parts below) */
+
+        /* Make email links more prominent */
+        .email-link {
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        .email-link:hover {
+            color: var(--accent-color);
+        }
+
+        /* Success / instruction message after submit */
+        .submit-instruction {
+            background-color: #d1fae5;
+            color: #065f46;
+            padding: 1.25rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            text-align: center;
+            font-size: 1.1rem;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <header>
+        <nav>
+            <a href="#" class="logo">TradeSiteSetup</a>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active" data-tab="main">Home</a></li>
+                <li><a href="#" class="nav-link" data-tab="products">Products</a></li>
+                <li><a href="#" class="nav-link" data-tab="about">About</a></li>
+                <li><a href="#" class="nav-link" data-tab="faq">FAQ</a></li>
+                <li>
+                    <a href="mailto:will@tradesitesetup.com" class="contact-email">
+                        📧 will@tradesitesetup.com
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN / OVERVIEW TAB -->
+    <div id="main" class="tab-content active">
+        <!-- Hero + Benefits + Pricing + Products preview + CTA (unchanged) -->
+        <!-- ... your existing content ... -->
+    </div>
+
+    <!-- PRODUCTS TAB -->
+    <div id="products" class="tab-content">
+        <!-- Product catalog with carousels, quantity selectors, add-to-cart (unchanged) -->
+        <!-- ... your existing content ... -->
+    </div>
+
+    <!-- ABOUT TAB -->
+    <div id="about" class="tab-content">
+        <!-- About content (unchanged) -->
+        <!-- ... your existing content ... -->
+    </div>
+
+    <!-- FAQ TAB -->
+    <div id="faq" class="tab-content">
+        <div class="container">
+            <section class="section">
+                <h2 class="section-title">How It Works & FAQ</h2>
+                <!-- ... process steps + most FAQs unchanged ... -->
+
+                <!-- Updated Final CTA with visible email -->
+                <div class="text-center mt-2">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--text-dark);">
+                        Still have questions?
+                    </h3>
+                    <p style="color: var(--text-light); margin-bottom: 0.75rem;">
+                        Feel free to reach out anytime:
+                    </p>
+                    <p style="font-size: 1.2rem; margin: 1rem 0;">
+                        <strong>Email:</strong> 
+                        <a href="mailto:will@tradesitesetup.com" class="email-link">
+                            will@tradesitesetup.com
+                        </a>
+                    </p>
+                    <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 1.5rem;">
+                        I'll usually respond within 24 hours.
+                    </p>
+                    <a href="#" class="cta-button" onclick="switchTab('products'); return false;">
+                        Browse Products & Start Order
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- FLOATING CART ICON (unchanged) -->
+    <div class="cart-icon-container">
+        <div class="cart-icon" onclick="openCart()">
+            🛒
+            <span class="cart-badge" id="cartBadge">0</span>
+        </div>
+    </div>
+
+    <!-- CART MODAL -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h2>Your Quote Request</h2>
+            <button class="cart-close" onclick="closeCart()">✕</button>
+        </div>
+        
+        <div class="cart-content">
+            <div class="cart-empty" id="cartEmpty">...</div>
+
+            <div id="cartItemsContainer" style="display: none;">
+                <div class="cart-items" id="cartItems"></div>
+
+                <div class="cart-total">...</div>
+
+                <p class="cart-disclaimer">...</p>
+
+                <div class="cart-customer-info">...</div>
+
+                <!-- CHANGED: Submit button now shows instruction instead of mailto -->
+                <button class="cart-submit-btn" onclick="submitQuoteRequest()">
+                    Submit for Quote
+                </button>
+
+                <!-- New instruction area -->
+                <div id="submitInstruction" class="submit-instruction">
+                    Thank you! Your cart details have been prepared.<br>
+                    Please email the information to:<br><br>
+                    <strong><a href="mailto:will@tradesitesetup.com" style="color:#065f46; font-size:1.15rem;">
+                        will@tradesitesetup.com
+                    </a></strong><br><br>
+                    You can copy the quote summary below and paste it into your email.<br>
+                    (Logos must be attached manually.)
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER – now with clear email link -->
+    <footer>
+        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">
+            <strong>Contact:</strong> 
+            <a href="mailto:will@tradesitesetup.com" class="email-link">
+                will@tradesitesetup.com
+            </a>
+        </p>
+        <p>© 2026 TradeSiteSetup.com | Huntsville, AL</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+            Custom Merch Made Simple for Small Businesses
+        </p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // =============================================
+        // TAB SWITCHING
+        // =============================================
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            document.getElementById(tabName).classList.add('active');
+            document.querySelector(`[data-tab="${tabName}"]`)?.classList.add('active');
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                switchTab(link.getAttribute('data-tab'));
+            });
+        });
+
+        // =============================================
+        // CART & QUANTITY / CAROUSEL LOGIC (unchanged)
+        // =============================================
+        let cart = [];
+
+        function changeQuantity(productId, change) { /* unchanged */ }
+        function addToCart(productId, productName, price) { /* unchanged */ }
+        function updateCartDisplay() { /* unchanged */ }
+        function handleLogoUpload(itemIndex, inputElement) { /* unchanged */ }
+        function removeFromCart(index) { /* unchanged */ }
+        function openCart() { /* unchanged */ }
+        function closeCart() { /* unchanged */ }
+
+        // =============================================
+        // NEW SUBMIT BEHAVIOR – no automatic mailto
+        // =============================================
+        function submitQuoteRequest() {
+            const name     = document.getElementById('cartCustomerName').value.trim();
+            const business  = document.getElementById('cartBusinessName').value.trim();
+            const email     = document.getElementById('cartCustomerEmail').value.trim();
+
+            if (!name || !business || !email) {
+                alert('Please fill in Name, Business Name, and Email.');
+                return;
+            }
+
+            if (cart.length === 0) {
+                alert('Your cart is empty.');
+                return;
+            }
+
+            // Build quote text (same as before)
+            let quoteText = `NEW QUOTE REQUEST FROM TRADESITESETUP.COM\n\n`;
+            quoteText += `Name: ${name}\nBusiness: ${business}\nEmail: ${email}\n`;
+            quoteText += `Phone: ${document.getElementById('cartCustomerPhone').value.trim() || '—'}\n\n`;
+            quoteText += `PRODUCTS:\n${'='.repeat(50)}\n`;
+
+            cart.forEach((item, i) => {
+                quoteText += `${i+1}. ${item.name}\n   Qty: ${item.quantity} × $${item.price.toFixed(2)} = $${item.subtotal.toFixed(2)}\n`;
+                quoteText += `   Logo: ${item.logoFileName || 'None uploaded'}\n\n`;
+            });
+
+            const total = cart.reduce((sum, item) => sum + item.subtotal, 0);
+            quoteText += `${'='.repeat(50)}\nEstimated Total: $${total.toFixed(2)}\n`;
+            quoteText += `(final price may vary – includes customization + shipping)\n\n`;
+
+            const comments = document.getElementById('cartCustomerComments').value.trim();
+            if (comments) quoteText += `Comments:\n${comments}\n\n`;
+
+            quoteText += `Submitted: ${new Date().toLocaleString()}\n`;
+
+            // Show instruction message
+            document.getElementById('submitInstruction').style.display = 'block';
+
+            // Optional: copy to clipboard
+            navigator.clipboard.writeText(quoteText).catch(() => {});
+
+            // You can also offer to open mailto manually — but not automatically
+            // const subject = encodeURIComponent(`Quote Request - ${business}`);
+            // const mailto = `mailto:will@tradesitesetup.com?subject=${subject}&body=${encodeURIComponent(quoteText)}`;
+            // if (confirm("Open email client now? (Logos must be attached manually)")) {
+            //     window.location.href = mailto;
+            // }
+        }
+
+        // Initialize
+        updateCartDisplay();
+    </script>
+</body>
+</html>
