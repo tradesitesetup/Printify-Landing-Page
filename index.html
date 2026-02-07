@@ -698,6 +698,19 @@
             display: none;
         }
 
+        footer {
+            background-color: var(--text-dark);
+            color: white;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+            margin: 0.5rem 0;
+        }
+
         @media (max-width: 768px) {
             .hero h1 { font-size: 1.8rem; }
             .hero p { font-size: 1rem; }
@@ -861,7 +874,7 @@
                                 <input type="number" id="qty-tote-bag" value="0" min="0" readonly>
                                 <button onclick="changeQuantity('tote-bag', 1)">+</button>
                             </div>
-                            <button class="add-to-cart-btn" onclick="addToCart('tote-bag', 'Tote Bag (AOP)', 22.00, 'https://images.printify.com/mockup/64e716e7ae7e2a0d850e0ea5/1389/12428/tote-bag-aop.jpg')">Add to Cart</button>
+                            <button class="add-to-cart-btn" onclick="addToCart('tote-bag', 'Tote Bag (AOP)', 22.00)">Add to Cart</button>
                         </div>
                     </div>
 
@@ -884,7 +897,7 @@
                                 <input type="number" id="qty-hoodie" value="0" min="0" readonly>
                                 <button onclick="changeQuantity('hoodie', 1)">+</button>
                             </div>
-                            <button class="add-to-cart-btn" onclick="addToCart('hoodie', 'Unisex Heavy Blend Hoodie', 38.00, 'https://images.printify.com/mockup/5cad82615a342e00017456f7/77/2163/unisex-heavy-blend-hooded-sweatshirt.jpg')">Add to Cart</button>
+                            <button class="add-to-cart-btn" onclick="addToCart('hoodie', 'Unisex Heavy Blend Hoodie', 38.00)">Add to Cart</button>
                         </div>
                     </div>
 
@@ -907,7 +920,7 @@
                                 <input type="number" id="qty-tshirt" value="0" min="0" readonly>
                                 <button onclick="changeQuantity('tshirt', 1)">+</button>
                             </div>
-                            <button class="add-to-cart-btn" onclick="addToCart('tshirt', 'Unisex Heavy Cotton Tee', 18.00, 'https://images.printify.com/mockup/5cad82615a342e00017456e9/6/2002/unisex-heavy-cotton-tee.jpg')">Add to Cart</button>
+                            <button class="add-to-cart-btn" onclick="addToCart('tshirt', 'Unisex Heavy Cotton Tee', 18.00)">Add to Cart</button>
                         </div>
                     </div>
 
@@ -930,7 +943,7 @@
                                 <input type="number" id="qty-mug" value="0" min="0" readonly>
                                 <button onclick="changeQuantity('mug', 1)">+</button>
                             </div>
-                            <button class="add-to-cart-btn" onclick="addToCart('mug', 'Ceramic Mug (11oz/15oz)', 14.00, 'https://images.printify.com/mockup/5fc018f3ea262701c5f9c3c5/478/7696/ceramic-mug-11oz-15oz.jpg')">Add to Cart</button>
+                            <button class="add-to-cart-btn" onclick="addToCart('mug', 'Ceramic Mug (11oz/15oz)', 14.00)">Add to Cart</button>
                         </div>
                     </div>
 
@@ -953,7 +966,7 @@
                                 <input type="number" id="qty-socks" value="0" min="0" readonly>
                                 <button onclick="changeQuantity('socks', 1)">+</button>
                             </div>
-                            <button class="add-to-cart-btn" onclick="addToCart('socks', 'Sublimation Socks', 12.00, 'https://images.printify.com/mockup/5f3b7f4e93d8c000045e82fc/376/5960/sublimation-socks.jpg')">Add to Cart</button>
+                            <button class="add-to-cart-btn" onclick="addToCart('socks', 'Sublimation Socks', 12.00)">Add to Cart</button>
                         </div>
                     </div>
 
@@ -976,7 +989,7 @@
                                 <input type="number" id="qty-mixing-glass" value="0" min="0" readonly>
                                 <button onclick="changeQuantity('mixing-glass', 1)">+</button>
                             </div>
-                            <button class="add-to-cart-btn" onclick="addToCart('mixing-glass', 'Mixing Glass (16oz)', 16.00, 'https://images.printify.com/mockup/61fd61a6ed91b90001c09b7d/1246/10853/mixing-glass-16oz.jpg')">Add to Cart</button>
+                            <button class="add-to-cart-btn" onclick="addToCart('mixing-glass', 'Mixing Glass (16oz)', 16.00)">Add to Cart</button>
                         </div>
                     </div>
 
@@ -999,7 +1012,7 @@
                                 <input type="number" id="qty-wine-glass" value="0" min="0" readonly>
                                 <button onclick="changeQuantity('wine-glass', 1)">+</button>
                             </div>
-                            <button class="add-to-cart-btn" onclick="addToCart('wine-glass', 'Stemless Wine Glass (11.75oz)', 15.00, 'https://images.printify.com/mockup/623c39be91b5c100013f79e3/1266/11063/stemless-wine-glass-1175oz.jpg')">Add to Cart</button>
+                            <button class="add-to-cart-btn" onclick="addToCart('wine-glass', 'Stemless Wine Glass (11.75oz)', 15.00)">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -1035,7 +1048,7 @@
                     <p style="margin-top: 1rem;">Whether you're a coffee shop looking for branded mugs, a pub wanting custom pint glasses, or a boutique needing tote bags for your customers, I'm here to help make it happen—without the stress.</p>
                     <p><strong>Let's work together to create something great!</strong> Reach out anytime through the Products tab, and I'll get back to you within 24 hours.</p>
                     <p style="margin-top: 2rem; text-align: center; color: var(--primary-color); font-size: 1.1rem;">
-                        📍 Huntsville, AL | 📧 Reach out via the order form
+                        📍 Huntsville, AL | Reach out via the order form
                     </p>
                 </div>
             </section>
@@ -1193,7 +1206,7 @@
         </div>
     </div>
 
-    <footer>
+    <footer style="text-align: center;">
         <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">
             <strong>Contact:</strong> will@tradesitesetup.com
         </p>
@@ -1338,7 +1351,7 @@
             const email    = document.getElementById('cartCustomerEmail').value.trim();
 
             if (!name || !business || !email) {
-                alert('Please fill in Name, Business Name, and Email.');
+                alert('Please fill in Your Name, Business Name, and Email Address.');
                 return;
             }
 
@@ -1347,7 +1360,6 @@
                 return;
             }
 
-            // Check for missing logos
             const missingLogo = cart.some(item => !item.logoFileName || item.logoFileName.trim() === '');
             if (missingLogo) {
                 alert('Please upload a logo for every item in the cart before submitting your quote request.');
@@ -1362,13 +1374,13 @@
 
             const params = {
                 name: name,
-                businessName: business,
-                customerEmail: email,
+                business_name: business,
+                email: email,
                 phone: document.getElementById('cartCustomerPhone').value.trim() || 'Not provided',
                 products: productsText,
                 total: total,
                 comments: document.getElementById('cartCustomerComments').value.trim() || 'None',
-                sentAt: new Date().toLocaleString()
+                sent_at: new Date().toLocaleString()
             };
 
             const btn = document.querySelector('.cart-submit-btn');
@@ -1376,11 +1388,13 @@
             btn.textContent = 'Sending...';
 
             try {
-                await emailjs.send(
+                const response = await emailjs.send(
                     'service_egx9scs',
                     'template_njapyr6',
                     params
                 );
+
+                console.log('EmailJS success:', response);
 
                 document.getElementById('submitSuccess').style.display = 'block';
 
@@ -1398,14 +1412,13 @@
 
             } catch (error) {
                 console.error('EmailJS full error:', error);
-                alert('Error sending quote request. Please try again or email us directly at will@tradesitesetup.com');
+                alert('Error sending quote request. Please check console for details or email us directly at will@tradesitesetup.com');
             } finally {
                 btn.disabled = false;
                 btn.textContent = 'Submit for Quote';
             }
         }
 
-        // Initialize cart display
         updateCartDisplay();
     </script>
 </body>
