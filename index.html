@@ -12,30 +12,27 @@
         }
 
         :root {
-            --primary-color: #4a90e2;        /* Softer blue */
-            --primary-dark: #357abd;
-            --secondary-color: #27ae60;      /* Gentle green */
-            --accent-color: #f1c40f;
-            --text-dark: #2c3e50;
-            --text-light: #7f8c8d;
-            --bg-light: #f8f9fa;             /* Warm light gray */
+            --primary-color: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary-color: #10b981;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
             --bg-white: #ffffff;
-            --border-color: #e0e6ed;
-            --header-bg: #ffffff;
-            --header-shadow: 0 2px 10px rgba(0,0,0,0.06);
-            --card-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            --border-color: #e5e7eb;
         }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             color: var(--text-dark);
-            line-height: 1.7;
+            line-height: 1.6;
             background-color: var(--bg-light);
         }
 
         header {
-            background-color: var(--header-bg);
-            box-shadow: var(--header-shadow);
+            background-color: var(--bg-white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -44,7 +41,7 @@
         nav {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 1.25rem 1.5rem;
+            padding: 1rem 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -52,15 +49,15 @@
         }
 
         .logo {
-            font-size: 1.6rem;
-            font-weight: 700;
+            font-size: 1.5rem;
+            font-weight: bold;
             color: var(--primary-color);
             text-decoration: none;
         }
 
         .nav-links {
             display: flex;
-            gap: 1.75rem;
+            gap: 1.5rem;
             list-style: none;
             flex-wrap: wrap;
         }
@@ -69,7 +66,8 @@
             color: var(--text-dark);
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.25s;
+            transition: color 0.3s;
+            padding: 0.5rem;
         }
 
         .nav-links a:hover,
@@ -79,17 +77,16 @@
 
         .contact-email {
             background-color: var(--secondary-color);
-            color: white;
-            padding: 0.6rem 1.2rem;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: background-color 0.25s, transform 0.2s;
+            color: white !important;
+            padding: 0.5rem 1rem !important;
+            border-radius: 6px;
+            font-weight: 600 !important;
+            transition: background-color 0.3s, transform 0.2s;
         }
 
         .contact-email:hover {
-            background-color: #219653;
-            transform: translateY(-1px);
+            background-color: #059669;
+            transform: translateY(-2px);
         }
 
         .tab-content {
@@ -103,100 +100,101 @@
         .hero {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
             color: white;
-            padding: 5rem 1.5rem 4rem;
+            padding: 4rem 1.5rem;
             text-align: center;
         }
 
         .hero-content {
-            max-width: 820px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 1.25rem;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
             line-height: 1.2;
         }
 
         .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2.25rem;
-            opacity: 0.92;
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
         }
 
         .cta-button {
             display: inline-block;
             background-color: var(--secondary-color);
             color: white;
-            padding: 1.1rem 2.4rem;
-            border-radius: 50px;
+            padding: 1rem 2rem;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.15rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 14px rgba(39, 174, 96, 0.25);
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
         }
 
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(39, 174, 96, 0.35);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
         }
 
         .container {
-            max-width: 1180px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 3.5rem 1.5rem;
+            padding: 3rem 1.5rem;
         }
 
         .section {
-            margin-bottom: 5rem;
+            margin-bottom: 4rem;
         }
 
         .section-title {
-            font-size: 2.2rem;
-            margin-bottom: 1.25rem;
+            font-size: 2rem;
+            margin-bottom: 1rem;
             color: var(--text-dark);
             text-align: center;
         }
 
         .section-subtitle {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             color: var(--text-light);
             text-align: center;
             margin-bottom: 3rem;
-            max-width: 760px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .benefits-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin-top: 2.5rem;
+            margin-top: 2rem;
         }
 
         .benefit-card {
             background: var(--bg-white);
-            padding: 2.25rem;
-            border-radius: 16px;
-            box-shadow: var(--card-shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .benefit-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
         }
 
         .benefit-icon {
-            font-size: 3rem;
-            margin-bottom: 1.25rem;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
 
         .benefit-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.75rem;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
             color: var(--primary-color);
         }
 
@@ -214,35 +212,33 @@
 
         .product-card {
             background: var(--bg-white);
-            border-radius: 16px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: var(--card-shadow);
-            transition: transform 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
         }
 
         .product-card:hover {
-            transform: translateY(-6px);
+            transform: translateY(-4px);
         }
 
         .product-image {
             width: 100%;
-            height: 220px;
-            background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+            height: 250px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 5rem;
-            color: rgba(255,255,255,0.7);
+            font-size: 4rem;
         }
 
         .product-info {
             padding: 1.5rem;
-            text-align: center;
         }
 
         .product-info h3 {
-            font-size: 1.35rem;
-            margin-bottom: 0.75rem;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
             color: var(--text-dark);
         }
 
@@ -252,43 +248,42 @@
         }
 
         .pricing-highlight {
-            background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
-            padding: 2.5rem;
-            border-radius: 16px;
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 2rem;
+            border-radius: 12px;
             text-align: center;
-            margin: 2.5rem 0;
-            border: 1px solid #ffd180;
-            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.15);
+            margin: 2rem 0;
+            border: 2px solid var(--accent-color);
         }
 
         .pricing-highlight h3 {
-            color: #ef6c00;
+            color: var(--text-dark);
             margin-bottom: 1rem;
         }
 
         .pricing-highlight p {
-            color: #5d4037;
-            font-size: 1.15rem;
+            color: var(--text-dark);
+            font-size: 1.1rem;
         }
 
         .product-catalog {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.75rem;
-            margin: 2.5rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
         }
 
         .catalog-item {
             background: var(--bg-white);
-            border-radius: 16px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: var(--card-shadow);
-            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .catalog-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
         }
 
         .product-carousel {
@@ -296,18 +291,18 @@
             width: 100%;
             height: 200px;
             overflow: hidden;
-            background-color: #f0f4f8;
+            background-color: var(--bg-light);
         }
 
         .carousel-container {
             display: flex;
-            transition: transform 0.4s ease;
+            transition: transform 0.3s ease-in-out;
             height: 100%;
         }
 
         .catalog-image {
             width: 100%;
-            height: 100%;
+            height: 200px;
             object-fit: cover;
             flex-shrink: 0;
         }
@@ -316,118 +311,126 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(255,255,255,0.85);
+            background-color: rgba(255, 255, 255, 0.9);
             border: none;
-            width: 36px;
-            height: 36px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
             cursor: pointer;
-            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
             color: var(--text-dark);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-            transition: all 0.2s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: background-color 0.3s;
             z-index: 10;
         }
 
         .carousel-btn:hover {
-            background: white;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            background-color: rgba(255, 255, 255, 1);
         }
 
-        .carousel-btn.prev { left: 12px; }
-        .carousel-btn.next { right: 12px; }
+        .carousel-btn.prev {
+            left: 10px;
+        }
+
+        .carousel-btn.next {
+            right: 10px;
+        }
+
+        .carousel-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 5px;
+            z-index: 10;
+        }
+
+        .carousel-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.6);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .carousel-indicator.active {
+            background-color: rgba(255, 255, 255, 1);
+        }
 
         .catalog-details {
-            padding: 1.25rem;
-            text-align: center;
+            padding: 1rem;
         }
 
         .catalog-details h4 {
-            font-size: 1.2rem;
-            margin-bottom: 0.6rem;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
             color: var(--text-dark);
         }
 
         .catalog-price {
-            font-size: 1.35rem;
+            font-size: 1.2rem;
             color: var(--primary-color);
-            font-weight: 700;
-            margin-bottom: 1rem;
+            font-weight: bold;
+            margin-bottom: 0.75rem;
         }
 
         .quantity-selector {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 0.75rem;
-            margin-bottom: 1rem;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .quantity-selector button {
-            background: #e9ecef;
+            background-color: var(--border-color);
             border: none;
-            width: 36px;
-            height: 36px;
-            border-radius: 8px;
-            font-size: 1.2rem;
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
             cursor: pointer;
-            transition: background 0.2s;
+            font-weight: bold;
+            transition: background-color 0.3s;
         }
 
         .quantity-selector button:hover {
-            background: #dee2e6;
+            background-color: var(--text-light);
+            color: white;
         }
 
         .quantity-selector input {
-            width: 60px;
+            width: 50px;
             text-align: center;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 0.5rem;
-            font-size: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 4px;
+            padding: 0.25rem;
         }
 
         .add-to-cart-btn {
             width: 100%;
-            background: var(--secondary-color);
+            background-color: var(--secondary-color);
             color: white;
             border: none;
-            padding: 0.9rem;
-            border-radius: 12px;
+            padding: 0.75rem;
+            border-radius: 6px;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.25s;
+            transition: background-color 0.3s;
         }
 
         .add-to-cart-btn:hover {
-            background: #219653;
-            transform: translateY(-2px);
+            background-color: #059669;
         }
 
-        /* Centered CTA section */
-        .cta-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 4rem 1rem;
-            background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
-            border-radius: 16px;
-            margin: 3rem 0;
-        }
-
-        .cta-section h2 {
-            margin-bottom: 1rem;
-        }
-
-        .cta-section p {
-            max-width: 600px;
-            margin: 0 auto 2rem;
-            color: var(--text-light);
-        }
-
-        /* Cart styles (condensed for brevity) */
         .cart-icon-container {
             position: fixed;
             bottom: 2rem;
@@ -436,37 +439,39 @@
         }
 
         .cart-icon {
-            background: var(--primary-color);
+            background-color: var(--primary-color);
             color: white;
-            width: 64px;
-            height: 64px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             cursor: pointer;
-            box-shadow: 0 6px 20px rgba(74, 144, 226, 0.35);
-            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: transform 0.3s, background-color 0.3s;
+            position: relative;
         }
 
         .cart-icon:hover {
-            transform: scale(1.08);
+            transform: scale(1.1);
+            background-color: var(--primary-dark);
         }
 
         .cart-badge {
             position: absolute;
-            top: -6px;
-            right: -6px;
-            background: var(--accent-color);
+            top: -5px;
+            right: -5px;
+            background-color: var(--accent-color);
             color: white;
-            width: 26px;
-            height: 26px;
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: bold;
         }
 
@@ -475,12 +480,12 @@
             top: 0;
             right: -100%;
             width: 100%;
-            max-width: 480px;
+            max-width: 500px;
             height: 100vh;
-            background: var(--bg-white);
-            box-shadow: -6px 0 25px rgba(0,0,0,0.15);
+            background-color: var(--bg-white);
+            box-shadow: -4px 0 12px rgba(0,0,0,0.2);
             z-index: 1001;
-            transition: right 0.4s ease;
+            transition: right 0.3s ease-in-out;
             overflow-y: auto;
         }
 
@@ -490,8 +495,11 @@
 
         .cart-overlay {
             position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.5);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0,0,0,0.5);
             z-index: 1000;
             display: none;
         }
@@ -501,7 +509,7 @@
         }
 
         .cart-header {
-            background: var(--primary-color);
+            background-color: var(--primary-color);
             color: white;
             padding: 1.5rem;
             display: flex;
@@ -509,28 +517,181 @@
             align-items: center;
         }
 
-        .cart-submit-btn {
-            width: 100%;
-            background: var(--secondary-color);
+        .cart-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .cart-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+        }
+
+        .cart-content {
+            padding: 1.5rem;
+        }
+
+        .cart-empty {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-light);
+        }
+
+        .cart-items {
+            margin-bottom: 2rem;
+        }
+
+        .cart-item {
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            position: relative;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .cart-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 0.5rem;
+        }
+
+        .cart-item-name {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+        }
+
+        .cart-item-remove {
+            background-color: #ef4444;
             color: white;
             border: none;
-            padding: 1.1rem;
-            border-radius: 12px;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        .cart-item-details {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cart-item-logo {
+            margin-top: 0.5rem;
+        }
+
+        .logo-upload-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .logo-upload-btn:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .logo-preview {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--secondary-color);
+        }
+
+        .cart-total {
+            background-color: var(--bg-light);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .cart-total-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .cart-total-row.final {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            border-top: 2px solid var(--border-color);
+            padding-top: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .cart-disclaimer {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-style: italic;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .cart-customer-info {
+            margin-bottom: 1.5rem;
+        }
+
+        .cart-customer-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .cart-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .cart-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .cart-submit-btn {
+            width: 100%;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 8px;
             font-size: 1.1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.25s;
+            transition: background-color 0.3s;
         }
 
-        .cart-submit-btn:hover:not(:disabled) {
-            background: #219653;
+        .cart-submit-btn:hover {
+            background-color: #059669;
+        }
+
+        .cart-submit-btn:disabled {
+            background-color: var(--text-light);
+            cursor: not-allowed;
         }
 
         #submitSuccess {
-            background: #e8f5e9;
-            color: #2e7d32;
+            background-color: #d1fae5;
+            color: #065f46;
             padding: 1.25rem;
-            border-radius: 12px;
+            border-radius: 8px;
             margin: 1.5rem 0;
             text-align: center;
             font-size: 1.1rem;
@@ -538,23 +699,24 @@
         }
 
         footer {
-            background: var(--text-dark);
+            background-color: var(--text-dark);
             color: white;
-            padding: 2.5rem 1.5rem;
+            padding: 2rem 1.5rem;
             text-align: center;
-            margin-top: 5rem;
+            margin-top: 4rem;
         }
 
         footer p {
-            opacity: 0.85;
-            margin: 0.6rem 0;
+            opacity: 0.8;
+            margin: 0.5rem 0;
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .hero p { font-size: 1.1rem; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero p { font-size: 1rem; }
             .nav-links { width: 100%; justify-content: center; margin-top: 1rem; }
-            .section-title { font-size: 1.8rem; }
+            .section-title { font-size: 1.6rem; }
+            .benefits-grid, .products-grid, .product-catalog { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -590,32 +752,32 @@
                     <div class="benefit-card">
                         <div class="benefit-icon">🚀</div>
                         <h3>Zero Inventory Required</h3>
-                        <p>Print-on-demand means no storage costs, no unsold stock, and no upfront investment.</p>
+                        <p>Print-on-demand means no storage costs, no unsold stock, and no upfront investment. Order as you need.</p>
                     </div>
                     <div class="benefit-card">
                         <div class="benefit-icon">💰</div>
                         <h3>Low Minimums</h3>
-                        <p>Order just one mug or a hundred shirts — same care for all quantities.</p>
+                        <p>Order just one mug or a hundred shirts. We handle small batches and bulk orders with the same care.</p>
                     </div>
                     <div class="benefit-card">
                         <div class="benefit-icon">🎨</div>
                         <h3>Custom Branding</h3>
-                        <p>Upload your logo — we create professional-looking merch that represents your brand.</p>
+                        <p>Upload your logo, choose your products, and we'll create professional merch that represents your brand.</p>
                     </div>
                     <div class="benefit-card">
                         <div class="benefit-icon">📦</div>
                         <h3>Direct Fulfillment</h3>
-                        <p>Printed, packaged, and shipped directly. You never touch inventory.</p>
+                        <p>Products are printed, packaged, and shipped directly to you or your customers. You never touch inventory.</p>
                     </div>
                     <div class="benefit-card">
                         <div class="benefit-icon">⚡</div>
                         <h3>Fast Turnaround</h3>
-                        <p>Most items printed in 2–7 business days with tracking.</p>
+                        <p>Most products are printed within 2-7 business days and shipped with tracking information.</p>
                     </div>
                     <div class="benefit-card">
                         <div class="benefit-icon">🤝</div>
                         <h3>Personal Support</h3>
-                        <p>Real person support based in Huntsville, AL — here to help you.</p>
+                        <p>Work with a real person who understands small business. Based in Huntsville, AL and here to help.</p>
                     </div>
                 </div>
             </section>
@@ -623,8 +785,9 @@
             <section class="section">
                 <div class="pricing-highlight">
                     <h3>Transparent Pricing, No Hidden Fees</h3>
-                    <p><strong>Base Cost:</strong> $8–$25 per item depending on type and customization<br>
-                    <strong>You Pay:</strong> Product cost + production + shipping. That's it.</p>
+                    <p><strong>Base Cost:</strong> Products start as low as $8-$25 per item depending on type and customization.<br>
+                    <strong>What You Pay:</strong> Product cost + production + shipping. That's it.</p>
+                    <p style="margin-top: 1rem; font-size: 0.95rem;">Perfect for coffee shops, pubs, retail stores, and local businesses looking to create branded merchandise without the overhead.</p>
                 </div>
             </section>
 
@@ -636,42 +799,48 @@
                         <div class="product-image">☕</div>
                         <div class="product-info">
                             <h3>Custom Mugs</h3>
-                            <p>11oz or 15oz ceramic. Perfect for coffee shops and cafes.</p>
+                            <p>11oz or 15oz ceramic mugs. Perfect for coffee shops and cafes.</p>
                         </div>
                     </div>
                     <div class="product-card">
                         <div class="product-image">👕</div>
                         <div class="product-info">
                             <h3>T-Shirts</h3>
-                            <p>Premium cotton tees in multiple colors.</p>
+                            <p>Premium cotton tees in multiple colors. Great for staff and customers.</p>
                         </div>
                     </div>
                     <div class="product-card">
                         <div class="product-image">🍺</div>
                         <div class="product-info">
                             <h3>Glassware</h3>
-                            <p>Pint glasses, tumblers and more for bars and restaurants.</p>
+                            <p>Pint glasses, wine glasses, and tumblers for bars and restaurants.</p>
                         </div>
                     </div>
                     <div class="product-card">
                         <div class="product-image">🧢</div>
                         <div class="product-info">
                             <h3>Hats & Caps</h3>
-                            <p>Embroidered hats and snapbacks.</p>
+                            <p>Embroidered hats and snapbacks for a professional look.</p>
                         </div>
                     </div>
                     <div class="product-card">
                         <div class="product-image">🎒</div>
                         <div class="product-info">
                             <h3>Tote Bags</h3>
-                            <p>Reusable canvas totes for retail and events.</p>
+                            <p>Reusable canvas totes perfect for retail shops and events.</p>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">📓</div>
+                        <div class="product-info">
+                            <h3>More Options</h3>
+                            <p>Stickers, posters, hoodies, and more. Just ask!</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Centered CTA -->
-            <section class="cta-section">
+            <section class="section text-center">
                 <h2 class="section-title">Ready to Create Your Custom Merch?</h2>
                 <p class="section-subtitle">Let's bring your brand to life with quality products your customers will love.</p>
                 <a href="#" class="cta-button" onclick="switchTab('products'); return false;">Place Your First Order</a>
@@ -679,48 +848,307 @@
         </div>
     </div>
 
-    <!-- Products tab (abbreviated for brevity - add your full catalog here if needed) -->
     <div id="products" class="tab-content">
         <div class="container">
             <section class="section">
-                <h2 class="section-title">Our Products</h2>
-                <p class="section-subtitle">Browse and add items to your quote cart</p>
+                <h2 class="section-title">Browse Our Product Catalog</h2>
+                <p class="section-subtitle">Select products, choose quantities, upload logos, and submit for quote</p>
 
                 <div class="product-catalog">
-                    <!-- Your product items go here -->
-                    <!-- Example: -->
-                    <div class="catalog-item">
+                    <div class="catalog-item" data-product-id="tote-bag">
                         <div class="product-carousel">
-                            <!-- images -->
+                            <div class="carousel-container" id="carousel-tote-bag">
+                                <img src="https://images.printify.com/mockup/64e716e7ae7e2a0d850e0ea5/1389/12428/tote-bag-aop.jpg" alt="Tote Bag" class="catalog-image">
+                                <img src="https://images.printify.com/mockup/64e716e7ae7e2a0d850e0ea5/1389/12429/tote-bag-aop.jpg" alt="Tote Bag" class="catalog-image">
+                                <img src="https://images.printify.com/mockup/64e716e7ae7e2a0d850e0ea5/1389/12430/tote-bag-aop.jpg" alt="Tote Bag" class="catalog-image">
+                            </div>
+                            <button class="carousel-btn prev" onclick="moveCarousel('tote-bag', -1)">‹</button>
+                            <button class="carousel-btn next" onclick="moveCarousel('tote-bag', 1)">›</button>
+                            <div class="carousel-indicators" id="indicators-tote-bag"></div>
                         </div>
                         <div class="catalog-details">
-                            <h4>Example Product</h4>
-                            <div class="catalog-price">$24.99</div>
-                            <!-- quantity + add button -->
+                            <h4>Tote Bag (AOP)</h4>
+                            <div class="catalog-price">$22.00</div>
+                            <div class="quantity-selector">
+                                <button onclick="changeQuantity('tote-bag', -1)">−</button>
+                                <input type="number" id="qty-tote-bag" value="0" min="0" readonly>
+                                <button onclick="changeQuantity('tote-bag', 1)">+</button>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart('tote-bag', 'Tote Bag (AOP)', 22.00)">Add to Cart</button>
                         </div>
                     </div>
-                    <!-- ... more items ... -->
+
+                    <div class="catalog-item" data-product-id="hoodie">
+                        <div class="product-carousel">
+                            <div class="carousel-container" id="carousel-hoodie">
+                                <img src="https://images.printify.com/mockup/5cad82615a342e00017456f7/77/2163/unisex-heavy-blend-hooded-sweatshirt.jpg" alt="Hoodie" class="catalog-image">
+                                <img src="https://images.printify.com/mockup/5cad82615a342e00017456f7/77/2164/unisex-heavy-blend-hooded-sweatshirt.jpg" alt="Hoodie" class="catalog-image">
+                                <img src="https://images.printify.com/mockup/5cad82615a342e00017456f7/77/2165/unisex-heavy-blend-hooded-sweatshirt.jpg" alt="Hoodie" class="catalog-image">
+                            </div>
+                            <button class="carousel-btn prev" onclick="moveCarousel('hoodie', -1)">‹</button>
+                            <button class="carousel-btn next" onclick="moveCarousel('hoodie', 1)">›</button>
+                            <div class="carousel-indicators" id="indicators-hoodie"></div>
+                        </div>
+                        <div class="catalog-details">
+                            <h4>Unisex Heavy Blend Hoodie</h4>
+                            <div class="catalog-price">$38.00</div>
+                            <div class="quantity-selector">
+                                <button onclick="changeQuantity('hoodie', -1)">−</button>
+                                <input type="number" id="qty-hoodie" value="0" min="0" readonly>
+                                <button onclick="changeQuantity('hoodie', 1)">+</button>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart('hoodie', 'Unisex Heavy Blend Hoodie', 38.00)">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item" data-product-id="tshirt">
+                        <div class="product-carousel">
+                            <div class="carousel-container" id="carousel-tshirt">
+                                <img src="https://images.printify.com/mockup/5cad82615a342e00017456e9/6/2002/unisex-heavy-cotton-tee.jpg" alt="T-Shirt" class="catalog-image">
+                                <img src="https://images.printify.com/mockup/5cad82615a342e00017456e9/6/2003/unisex-heavy-cotton-tee.jpg" alt="T-Shirt" class="catalog-image">
+                                <img src="https://images.printify.com/mockup/5cad82615a342e00017456e9/6/2004/unisex-heavy-cotton-tee.jpg" alt="T-Shirt" class="catalog-image">
+                            </div>
+                            <button class="carousel-btn prev" onclick="moveCarousel('tshirt', -1)">‹</button>
+                            <button class="carousel-btn next" onclick="moveCarousel('tshirt', 1)">›</button>
+                            <div class="carousel-indicators" id="indicators-tshirt"></div>
+                        </div>
+                        <div class="catalog-details">
+                            <h4>Unisex Heavy Cotton Tee</h4>
+                            <div class="catalog-price">$18.00</div>
+                            <div class="quantity-selector">
+                                <button onclick="changeQuantity('tshirt', -1)">−</button>
+                                <input type="number" id="qty-tshirt" value="0" min="0" readonly>
+                                <button onclick="changeQuantity('tshirt', 1)">+</button>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart('tshirt', 'Unisex Heavy Cotton Tee', 18.00)">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item" data-product-id="mug">
+                        <div class="product-carousel">
+                            <div class="carousel-container" id="carousel-mug">
+                                <img src="https://images.printify.com/mockup/5fc018f3ea262701c5f9c3c5/478/7696/ceramic-mug-11oz-15oz.jpg" alt="Ceramic Mug" class="catalog-image">
+                                <img src="https://images.printify.com/mockup/5fc018f3ea262701c5f9c3c5/478/7697/ceramic-mug-11oz-15oz.jpg" alt="Ceramic Mug" class="catalog-image">
+                                <img src="https://images.printify.com/mockup/5fc018f3ea262701c5f9c3c5/478/7698/ceramic-mug-11oz-15oz.jpg" alt="Ceramic Mug" class="catalog-image">
+                            </div>
+                            <button class="carousel-btn prev" onclick="moveCarousel('mug', -1)">‹</button>
+                            <button class="carousel-btn next" onclick="moveCarousel('mug', 1)">›</button>
+                            <div class="carousel-indicators" id="indicators-mug"></div>
+                        </div>
+                        <div class="catalog-details">
+                            <h4>Ceramic Mug (11oz/15oz)</h4>
+                            <div class="catalog-price">$14.00</div>
+                            <div class="quantity-selector">
+                                <button onclick="changeQuantity('mug', -1)">−</button>
+                                <input type="number" id="qty-mug" value="0" min="0" readonly>
+                                <button onclick="changeQuantity('mug', 1)">+</button>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart('mug', 'Ceramic Mug (11oz/15oz)', 14.00)">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item" data-product-id="socks">
+                        <div class="product-carousel">
+                            <div class="carousel-container" id="carousel-socks">
+                                <img src="https://images.printify.com/mockup/5f3b7f4e93d8c000045e82fc/376/5960/sublimation-socks.jpg" alt="Sublimation Socks" class="catalog-image">
+                                <img src="https://images.printify.com/mockup/5f3b7f4e93d8c000045e82fc/376/5961/sublimation-socks.jpg" alt="Sublimation Socks" class="catalog-image">
+                                <img src="https://images.printify.com/mockup/5f3b7f4e93d8c000045e82fc/376/5962/sublimation-socks.jpg" alt="Sublimation Socks" class="catalog-image">
+                            </div>
+                            <button class="carousel-btn prev" onclick="moveCarousel('socks', -1)">‹</button>
+                            <button class="carousel-btn next" onclick="moveCarousel('socks', 1)">›</button>
+                            <div class="carousel-indicators" id="indicators-socks"></div>
+                        </div>
+                        <div class="catalog-details">
+                            <h4>Sublimation Socks</h4>
+                            <div class="catalog-price">$12.00</div>
+                            <div class="quantity-selector">
+                                <button onclick="changeQuantity('socks', -1)">−</button>
+                                <input type="number" id="qty-socks" value="0" min="0" readonly>
+                                <button onclick="changeQuantity('socks', 1)">+</button>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart('socks', 'Sublimation Socks', 12.00)">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item" data-product-id="mixing-glass">
+                        <div class="product-carousel">
+                            <div class="carousel-container" id="carousel-mixing-glass">
+                                <img src="https://images.printify.com/mockup/61fd61a6ed91b90001c09b7d/1246/10853/mixing-glass-16oz.jpg" alt="Mixing Glass" class="catalog-image">
+                                <img src="https://images.printify.com/mockup/61fd61a6ed91b90001c09b7d/1246/10854/mixing-glass-16oz.jpg" alt="Mixing Glass" class="catalog-image">
+                                <img src="https://images.printify.com/mockup/61fd61a6ed91b90001c09b7d/1246/10855/mixing-glass-16oz.jpg" alt="Mixing Glass" class="catalog-image">
+                            </div>
+                            <button class="carousel-btn prev" onclick="moveCarousel('mixing-glass', -1)">‹</button>
+                            <button class="carousel-btn next" onclick="moveCarousel('mixing-glass', 1)">›</button>
+                            <div class="carousel-indicators" id="indicators-mixing-glass"></div>
+                        </div>
+                        <div class="catalog-details">
+                            <h4>Mixing Glass (16oz)</h4>
+                            <div class="catalog-price">$16.00</div>
+                            <div class="quantity-selector">
+                                <button onclick="changeQuantity('mixing-glass', -1)">−</button>
+                                <input type="number" id="qty-mixing-glass" value="0" min="0" readonly>
+                                <button onclick="changeQuantity('mixing-glass', 1)">+</button>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart('mixing-glass', 'Mixing Glass (16oz)', 16.00)">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog-item" data-product-id="wine-glass">
+                        <div class="product-carousel">
+                            <div class="carousel-container" id="carousel-wine-glass">
+                                <img src="https://images.printify.com/mockup/623c39be91b5c100013f79e3/1266/11063/stemless-wine-glass-1175oz.jpg" alt="Stemless Wine Glass" class="catalog-image">
+                                <img src="https://images.printify.com/mockup/623c39be91b5c100013f79e3/1266/11064/stemless-wine-glass-1175oz.jpg" alt="Stemless Wine Glass" class="catalog-image">
+                                <img src="https://images.printify.com/mockup/623c39be91b5c100013f79e3/1266/11065/stemless-wine-glass-1175oz.jpg" alt="Stemless Wine Glass" class="catalog-image">
+                            </div>
+                            <button class="carousel-btn prev" onclick="moveCarousel('wine-glass', -1)">‹</button>
+                            <button class="carousel-btn next" onclick="moveCarousel('wine-glass', 1)">›</button>
+                            <div class="carousel-indicators" id="indicators-wine-glass"></div>
+                        </div>
+                        <div class="catalog-details">
+                            <h4>Stemless Wine Glass (11.75oz)</h4>
+                            <div class="catalog-price">$15.00</div>
+                            <div class="quantity-selector">
+                                <button onclick="changeQuantity('wine-glass', -1)">−</button>
+                                <input type="number" id="qty-wine-glass" value="0" min="0" readonly>
+                                <button onclick="changeQuantity('wine-glass', 1)">+</button>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart('wine-glass', 'Stemless Wine Glass (11.75oz)', 15.00)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin: 2rem 0; padding: 1.5rem; background-color: var(--bg-light); border-radius: 8px;">
+                    <p style="color: var(--text-dark); font-size: 1.1rem; margin-bottom: 0.5rem;">
+                        <strong>How it works:</strong> Add products to your cart, upload your logos, and submit for a custom quote.
+                    </p>
+                    <p style="color: var(--text-light); font-size: 0.95rem;">
+                        Prices shown are estimates based on base cost + healthy markup. Final pricing may vary based on customization.
+                    </p>
                 </div>
             </section>
         </div>
     </div>
 
-    <!-- About & FAQ tabs (add your content here) -->
     <div id="about" class="tab-content">
         <div class="container">
-            <h2 class="section-title">About Us</h2>
-            <!-- your about content -->
+            <section class="section">
+                <h2 class="section-title">About TradeSiteSetup</h2>
+                <div class="about-content">
+                    <p><strong>Hi, I'm based in Huntsville, Alabama,</strong> and I started TradeSiteSetup to help small businesses like yours bring their brand to life without the headaches of managing inventory or production.</p>
+                    <p>I know what it's like to run a small business—you're already juggling a million things. The last thing you need is to worry about ordering bulk merch, storing it in your back room, and figuring out shipping logistics. That's where I come in.</p>
+                    <p><strong>My goal is simple:</strong> Make custom merchandise accessible, affordable, and hassle-free for coffee shops, pubs, retail stores, and any small business that wants to sell or give away branded products.</p>
+                    <p>Using modern print-on-demand technology through partners like Printify and Printful, I can offer you:</p>
+                    <ul style="margin-left: 2rem; margin-top: 0.5rem; color: var(--text-light);">
+                        <li>✅ No minimum orders (order 1 or 100!)</li>
+                        <li>✅ No inventory storage needed</li>
+                        <li>✅ Fast production and fulfillment</li>
+                        <li>✅ Direct shipping to you or your customers</li>
+                        <li>✅ Professional quality products</li>
+                    </ul>
+                    <p style="margin-top: 1rem;">Whether you're a coffee shop looking for branded mugs, a pub wanting custom pint glasses, or a boutique needing tote bags for your customers, I'm here to help make it happen—without the stress.</p>
+                    <p><strong>Let's work together to create something great!</strong> Reach out anytime through the Products tab, and I'll get back to you within 24 hours.</p>
+                    <p style="margin-top: 2rem; text-align: center; color: var(--primary-color); font-size: 1.1rem;">
+                        📍 Huntsville, AL | Reach out via the order form
+                    </p>
+                </div>
+            </section>
         </div>
     </div>
 
     <div id="faq" class="tab-content">
         <div class="container">
-            <h2 class="section-title">FAQ</h2>
-            <!-- your FAQ content -->
+            <section class="section">
+                <h2 class="section-title">How It Works & FAQ</h2>
+                <p class="section-subtitle">Everything you need to know about our process and print-on-demand fulfillment.</p>
+
+                <h3 style="text-align: center; margin: 3rem 0 1.5rem; font-size: 1.5rem; color: var(--primary-color);">
+                    Our 5-Step Fulfillment Process
+                </h3>
+
+                <div class="process-steps">
+                    <div class="process-step">
+                        <span class="process-step-number">1</span>
+                        <h4>Order Placement</h4>
+                        <p>You (or your customer) submit an order through our form. Upload your logo and tell us what you need.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="process-step-number">2</span>
+                        <h4>Automatic Fulfillment Setup</h4>
+                        <p>I receive your order and set up production through Printify, which connects to professional print partners across the country.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="process-step-number">3</span>
+                        <h4>Production Time</h4>
+                        <p>Most products are printed within 2-7 business days, depending on the item type and complexity.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="process-step-number">4</span>
+                        <h4>Shipping & Tracking</h4>
+                        <p>Your order is automatically shipped with tracking information sent directly to you or your customer via email.</p>
+                    </div>
+                    <div class="process-step">
+                        <span class="process-step-number">5</span>
+                        <h4>Delivered!</h4>
+                        <p>Products arrive at your door (or your customer's door) without you ever handling production, storage, or shipping.</p>
+                    </div>
+                </div>
+
+                <h3 style="text-align: center; margin: 3rem 0 1.5rem; font-size: 1.5rem; color: var(--primary-color);">
+                    Frequently Asked Questions
+                </h3>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">Do I need inventory or a warehouse?</div>
+                        <div class="faq-answer">Nope! That's the beauty of print-on-demand. Products are only created when someone orders them. No storage, no unsold inventory, no risk.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">How long does fulfillment take?</div>
+                        <div class="faq-answer">Most products are printed and ready to ship within 2-7 business days. Shipping time depends on the destination, but typically adds another 3-5 business days for domestic orders.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What about shipping costs?</div>
+                        <div class="faq-answer">Printify handles all shipping logistics and provides tracking information automatically. Shipping costs are calculated based on product weight, size, and destination. I'll include shipping estimates in your quote.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Will I know when my order is fulfilled?</div>
+                        <div class="faq-answer">Yes! Printify provides automatic updates throughout the production and shipping process. You'll receive notifications when your order enters production, when it ships, and tracking information to follow its journey.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What if I need help with my design or logo?</div>
+                        <div class="faq-answer">No problem! If your logo needs adjustment for printing, I can help with basic formatting. Just send me what you have, and we'll make sure it looks great on your products.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Can I order just one item to test it out?</div>
+                        <div class="faq-answer">Absolutely! There are no minimum orders. Order a single mug or t-shirt to see the quality before committing to larger quantities.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What products can you create?</div>
+                        <div class="faq-answer">Mugs, t-shirts, hoodies, hats, glassware, tote bags, stickers, posters, and much more. If you have something specific in mind, just ask! Printify has hundreds of products available.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">How much does this cost?</div>
+                        <div class="faq-answer">Pricing depends on the product type, quantity, and customization. Generally, products range from $8-$25 per item for production, plus shipping. I'll provide a detailed quote before you commit to anything.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Can you ship directly to my customers?</div>
+                        <div class="faq-answer">Yes! If you want to sell merch online or offer it as rewards, I can arrange for orders to ship directly to your customers with your branding. Perfect for e-commerce stores or customer appreciation gifts.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What payment methods do you accept?</div>
+                        <div class="faq-answer">I use Stripe for secure payment processing, which accepts all major credit cards, debit cards, and digital wallets. Safe, fast, and easy.</div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-2">
+                    <h3 style="font-size: 1.4rem; margin-bottom: 1rem; color: var(--text-dark);">Still have questions?</h3>
+                    <p style="color: var(--text-light); margin-bottom: 1.5rem;">Reach out through the order form and I'll get back to you within 24 hours.</p>
+                    <a href="#" class="cta-button" onclick="switchTab('products'); return false;">Contact Me</a>
+                </div>
+            </section>
         </div>
     </div>
 
-    <!-- Cart UI -->
     <div class="cart-icon-container">
         <div class="cart-icon" onclick="openCart()">
             🛒 <span class="cart-badge" id="cartBadge">0</span>
@@ -735,23 +1163,45 @@
             <button class="cart-close" onclick="closeCart()">✕</button>
         </div>
         <div class="cart-content">
-            <div class="cart-empty" id="cartEmpty">Your cart is empty</div>
-            <div id="cartItemsContainer" style="display:none;">
+            <div class="cart-empty" id="cartEmpty">
+                <div style="font-size: 3rem; margin-bottom: 1rem;">🛒</div>
+                <p>Your cart is empty</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem;">Browse our catalog and add products to get started!</p>
+            </div>
+
+            <div id="cartItemsContainer" style="display: none;">
                 <div class="cart-items" id="cartItems"></div>
+
                 <div class="cart-total">
-                    <div class="cart-total-row"><span>Subtotal:</span><span id="cartSubtotal">$0.00</span></div>
-                    <div class="cart-total-row final"><span>Estimated Total:</span><span id="cartTotal">$0.00</span></div>
+                    <div class="cart-total-row">
+                        <span>Subtotal:</span>
+                        <span id="cartSubtotal">$0.00</span>
+                    </div>
+                    <div class="cart-total-row final">
+                        <span>Estimated Total:</span>
+                        <span id="cartTotal">$0.00</span>
+                    </div>
                 </div>
+
+                <p class="cart-disclaimer">
+                    * Estimated Total Price – This is just an estimate; final price may vary based on customization, shipping, and final specifications.
+                </p>
+
                 <div class="cart-customer-info">
                     <h3>Your Contact Information</h3>
                     <input type="text" id="cartCustomerName" class="cart-input" placeholder="Your Name *" required>
                     <input type="text" id="cartBusinessName" class="cart-input" placeholder="Business Name *" required>
                     <input type="email" id="cartCustomerEmail" class="cart-input" placeholder="Email Address *" required>
                     <input type="tel" id="cartCustomerPhone" class="cart-input" placeholder="Phone Number">
-                    <textarea id="cartCustomerComments" class="cart-input" placeholder="Additional comments..." rows="3"></textarea>
+                    <textarea id="cartCustomerComments" class="cart-input" placeholder="Additional comments or special requests..." rows="3"></textarea>
                 </div>
+
                 <button class="cart-submit-btn" onclick="submitQuoteRequest()">Submit for Quote</button>
-                <div id="submitSuccess">Thank you! Your quote request has been sent.</div>
+
+                <div id="submitSuccess" style="display:none;">
+                    Thank you! Your quote request has been sent automatically.<br>
+                    We'll review it and get back to you within 24 hours.
+                </div>
             </div>
         </div>
     </div>
@@ -764,11 +1214,13 @@
         <p style="margin-top: 0.5rem; font-size: 0.9rem;">Custom Merch Made Simple for Small Businesses</p>
     </footer>
 
-    <!-- EmailJS -->
+    <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
-            emailjs.init("g7_40GuawxicxAFjM");
+            emailjs.init({
+                publicKey: "g7_40GuawxicxAFjM"
+            });
         })();
     </script>
 
@@ -776,78 +1228,121 @@
         let cart = [];
 
         function switchTab(tabName) {
-            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
             document.getElementById(tabName).classList.add('active');
             document.querySelector(`[data-tab="${tabName}"]`)?.classList.add('active');
-            window.scrollTo({top: 0, behavior: 'smooth'});
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        function changeQuantity(id, delta) {
-            const el = document.getElementById(`qty-${id}`);
-            let v = parseInt(el.value) || 0;
-            el.value = Math.max(0, v + delta);
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                switchTab(this.getAttribute('data-tab'));
+            });
+        });
+
+        function changeQuantity(productId, change) {
+            const qtyInput = document.getElementById(`qty-${productId}`);
+            let current = parseInt(qtyInput.value) || 0;
+            qtyInput.value = Math.max(0, current + change);
         }
 
-        function addToCart(id, name, price) {
-            const qty = parseInt(document.getElementById(`qty-${id}`).value) || 0;
-            if (qty === 0) return alert("Select quantity > 0");
-            const idx = cart.findIndex(i => i.id === id);
-            if (idx > -1) {
-                cart[idx].quantity = qty;
-                cart[idx].subtotal = qty * price;
-            } else {
-                cart.push({id, name, price, quantity: qty, subtotal: qty * price, logoFileName: null});
+        function addToCart(productId, productName, price) {
+            const qtyInput = document.getElementById(`qty-${productId}`);
+            const quantity = parseInt(qtyInput.value) || 0;
+
+            if (quantity === 0) {
+                alert('Please select a quantity greater than 0');
+                return;
             }
+
+            const existingIndex = cart.findIndex(item => item.id === productId);
+            if (existingIndex !== -1) {
+                cart[existingIndex].quantity = quantity;
+                cart[existingIndex].subtotal = quantity * price;
+            } else {
+                cart.push({
+                    id: productId,
+                    name: productName,
+                    price: price,
+                    quantity: quantity,
+                    subtotal: quantity * price,
+                    logo: null,
+                    logoFileName: null
+                });
+            }
+
+            qtyInput.value = 0;
             updateCartDisplay();
+            alert(`${productName} added to cart!`);
         }
 
         function updateCartDisplay() {
-            document.getElementById('cartBadge').textContent = cart.reduce((s,i)=>s+i.quantity,0);
-
+            const badge = document.getElementById('cartBadge');
             const empty = document.getElementById('cartEmpty');
-            const cont = document.getElementById('cartItemsContainer');
+            const container = document.getElementById('cartItemsContainer');
+            const itemsDiv = document.getElementById('cartItems');
+
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            badge.textContent = totalItems;
+
             if (cart.length === 0) {
                 empty.style.display = 'block';
-                cont.style.display = 'none';
+                container.style.display = 'none';
                 return;
             }
-            empty.style.display = 'none';
-            cont.style.display = 'block';
 
-            document.getElementById('cartItems').innerHTML = cart.map((item,i)=>`
+            empty.style.display = 'none';
+            container.style.display = 'block';
+
+            itemsDiv.innerHTML = cart.map((item, index) => `
                 <div class="cart-item">
-                    <div class="cart-item-name">${item.name}</div>
-                    <div>Qty: ${item.quantity} × $${item.price.toFixed(2)}</div>
-                    <div class="cart-item-logo">
-                        <button class="logo-upload-btn" onclick="document.getElementById('logo-${i}').click()">Upload Logo</button>
-                        <input type="file" id="logo-${i}" accept="image/*" style="display:none" onchange="handleLogoUpload(${i},this)">
-                        ${item.logoFileName ? `<div>✓ ${item.logoFileName}</div>` : ''}
+                    <div class="cart-item-header">
+                        <div class="cart-item-name">${item.name}</div>
+                        <button class="cart-item-remove" onclick="removeFromCart(${index})">Remove</button>
                     </div>
-                    <button onclick="cart.splice(${i},1);updateCartDisplay()">Remove</button>
+                    <div class="cart-item-details">
+                        Quantity: ${item.quantity} × $${item.price.toFixed(2)} = $${item.subtotal.toFixed(2)}
+                    </div>
+                    <div class="cart-item-logo">
+                        <input type="file" id="logo-${item.id}" accept="image/*,.pdf,.ai,.eps" style="display:none;" onchange="handleLogoUpload(${index}, this)">
+                        <button class="logo-upload-btn" onclick="document.getElementById('logo-${item.id}').click()">
+                            ${item.logoFileName ? 'Change Logo' : 'Upload Logo'}
+                        </button>
+                        ${item.logoFileName ? `<div class="logo-preview">✓ ${item.logoFileName}</div>` : ''}
+                    </div>
                 </div>
             `).join('');
 
-            const total = cart.reduce((s,i)=>s+i.subtotal,0);
+            const total = cart.reduce((sum, item) => sum + item.subtotal, 0);
             document.getElementById('cartSubtotal').textContent = `$${total.toFixed(2)}`;
             document.getElementById('cartTotal').textContent = `$${total.toFixed(2)}`;
         }
 
-        function handleLogoUpload(idx, input) {
-            if (input.files[0]) {
-                cart[idx].logoFileName = input.files[0].name;
-                updateCartDisplay();
-            }
+        function handleLogoUpload(index, input) {
+            const file = input.files[0];
+            if (!file) return;
+            cart[index].logo = file;
+            cart[index].logoFileName = file.name;
+            updateCartDisplay();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartDisplay();
         }
 
         function openCart() {
             document.getElementById('cartModal').classList.add('open');
             document.getElementById('cartOverlay').classList.add('show');
+            document.body.style.overflow = 'hidden';
         }
 
         function closeCart() {
             document.getElementById('cartModal').classList.remove('open');
             document.getElementById('cartOverlay').classList.remove('show');
+            document.body.style.overflow = 'auto';
         }
 
         async function submitQuoteRequest() {
@@ -865,25 +1360,26 @@
                 return;
             }
 
-            if (cart.some(item => !item.logoFileName)) {
-                alert('Please upload a logo for every item in the cart.');
+            const missingLogo = cart.some(item => !item.logoFileName || item.logoFileName.trim() === '');
+            if (missingLogo) {
+                alert('Please upload a logo for every item in the cart before submitting your quote request.');
                 return;
             }
 
-            let products = cart.map((item,i) => 
-                `${i+1}. ${item.name} — Qty: ${item.quantity} — $${item.subtotal.toFixed(2)} — Logo: ${item.logoFileName}`
-            ).join('\n');
+            let productsText = cart.map((item, i) => 
+                `${i + 1}. ${item.name}\n   Quantity: ${item.quantity}\n   Subtotal: $${item.subtotal.toFixed(2)}\n   Logo: ${item.logoFileName}`
+            ).join('\n\n');
 
-            const total = cart.reduce((s,i)=>s+i.subtotal,0).toFixed(2);
+            const total = cart.reduce((sum, item) => sum + item.subtotal, 0).toFixed(2);
 
             const params = {
-                name,
+                name: name,
                 business_name: business,
-                email,
-                phone: document.getElementById('cartCustomerPhone').value.trim() || '—',
-                products,
-                total,
-                comments: document.getElementById('cartCustomerComments').value.trim() || '—',
+                email: email,
+                phone: document.getElementById('cartCustomerPhone').value.trim() || 'Not provided',
+                products: productsText,
+                total: total,
+                comments: document.getElementById('cartCustomerComments').value.trim() || 'None',
                 sent_at: new Date().toLocaleString()
             };
 
@@ -892,18 +1388,31 @@
             btn.textContent = 'Sending...';
 
             try {
-                await emailjs.send('service_egx9scs', 'template_njapyr6', params);
+                const response = await emailjs.send(
+                    'service_egx9scs',
+                    'template_nzv04mb',
+                    params
+                );
+
+                console.log('EmailJS success:', response);
+
                 document.getElementById('submitSuccess').style.display = 'block';
+
                 setTimeout(() => {
                     cart = [];
                     updateCartDisplay();
-                    document.querySelectorAll('#cartCustomerName,#cartBusinessName,#cartCustomerEmail,#cartCustomerPhone,#cartCustomerComments').forEach(el => el.value = '');
+                    document.getElementById('cartCustomerName').value = '';
+                    document.getElementById('cartBusinessName').value = '';
+                    document.getElementById('cartCustomerEmail').value = '';
+                    document.getElementById('cartCustomerPhone').value = '';
+                    document.getElementById('cartCustomerComments').value = '';
                     closeCart();
                     document.getElementById('submitSuccess').style.display = 'none';
-                }, 2500);
-            } catch (err) {
-                console.error(err);
-                alert('Could not send request. Please email will@tradesitesetup.com directly.');
+                }, 3000);
+
+            } catch (error) {
+                console.error('EmailJS full error:', error);
+                alert('Error sending quote request. Please check console for details or email us directly at will@tradesitesetup.com');
             } finally {
                 btn.disabled = false;
                 btn.textContent = 'Submit for Quote';
