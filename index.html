@@ -888,6 +888,29 @@
                 <p class="section-subtitle">Select products, choose quantities, upload logos, and submit for quote</p>
 
                 <div class="product-catalog">
+             <div class="catalog-item" data-product-id="mug">
+                        <div class="product-carousel">
+                            <div class="carousel-container" id="carousel-mug">
+                                <img src="https://printify.com/cdn-cgi/image/width=520,quality=100,format=avif/https://images.printify.com/api/catalog/66d94d839bd43b3eac03ded2" alt="Ceramic Mug" class="catalog-image">
+                                <img src="https://printify.com/cdn-cgi/image/width=520,quality=100,format=avif/https://images.printify.com/api/catalog/66d94e6bab0893d4fe01b186" alt="Ceramic Mug" class="catalog-image">
+                                <img src="https://printify.com/cdn-cgi/image/width=520,quality=100,format=avif/https://images.printify.com/api/catalog/66d94dae9bd43b3eac03ded3" alt="Ceramic Mug" class="catalog-image">
+                            </div>
+                            <button class="carousel-btn prev" onclick="moveCarousel('mug', -1)">‹</button>
+                            <button class="carousel-btn next" onclick="moveCarousel('mug', 1)">›</button>
+                            <div class="carousel-indicators" id="indicators-mug"></div>
+                        </div>
+                        <div class="catalog-details">
+                            <h4>Ceramic Mug (11oz/15oz)</h4>
+                            <div class="catalog-price">$14.00</div>
+                            <div class="quantity-selector">
+                                <button onclick="changeQuantity('mug', -1)">−</button>
+                                <input type="number" id="qty-mug" value="0" min="1" readonly>
+                                <button onclick="changeQuantity('mug', 1)">+</button>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart('mug', 'Ceramic Mug (11oz/15oz)', 14.00)">Add to Cart</button>
+                        </div>
+                    </div>
+                    
                     <div class="catalog-item" data-product-id="tote-bag">
                         <div class="product-carousel">
                             <div class="carousel-container" id="carousel-tote-bag">
@@ -957,28 +980,7 @@
                         </div>
                     </div>
 
-                    <div class="catalog-item" data-product-id="mug">
-                        <div class="product-carousel">
-                            <div class="carousel-container" id="carousel-mug">
-                                <img src="https://printify.com/cdn-cgi/image/width=520,quality=100,format=avif/https://images.printify.com/api/catalog/66d94d839bd43b3eac03ded2" alt="Ceramic Mug" class="catalog-image">
-                                <img src="https://printify.com/cdn-cgi/image/width=520,quality=100,format=avif/https://images.printify.com/api/catalog/66d94e6bab0893d4fe01b186" alt="Ceramic Mug" class="catalog-image">
-                                <img src="https://printify.com/cdn-cgi/image/width=520,quality=100,format=avif/https://images.printify.com/api/catalog/66d94dae9bd43b3eac03ded3" alt="Ceramic Mug" class="catalog-image">
-                            </div>
-                            <button class="carousel-btn prev" onclick="moveCarousel('mug', -1)">‹</button>
-                            <button class="carousel-btn next" onclick="moveCarousel('mug', 1)">›</button>
-                            <div class="carousel-indicators" id="indicators-mug"></div>
-                        </div>
-                        <div class="catalog-details">
-                            <h4>Ceramic Mug (11oz/15oz)</h4>
-                            <div class="catalog-price">$14.00</div>
-                            <div class="quantity-selector">
-                                <button onclick="changeQuantity('mug', -1)">−</button>
-                                <input type="number" id="qty-mug" value="0" min="1" readonly>
-                                <button onclick="changeQuantity('mug', 1)">+</button>
-                            </div>
-                            <button class="add-to-cart-btn" onclick="addToCart('mug', 'Ceramic Mug (11oz/15oz)', 14.00)">Add to Cart</button>
-                        </div>
-                    </div>
+       
 
                     <div class="catalog-item" data-product-id="socks">
                         <div class="product-carousel">
