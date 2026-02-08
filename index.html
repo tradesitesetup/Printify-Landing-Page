@@ -1453,6 +1453,21 @@
         }
 
         updateCartDisplay();
+        function moveCarousel(productId, direction) {
+    // 1. Find the container using the ID we'll set in the HTML
+    const container = document.getElementById(`carousel-${productId}`);
+    
+    if (container) {
+        // 2. Determine how wide one product image is
+        const scrollAmount = container.clientWidth;
+        
+        // 3. Scroll left or right by that amount
+        container.scrollBy({
+            left: direction * scrollAmount,
+            behavior: 'smooth'
+        });
+    }
+}
     </script>
 </body>
 </html>
