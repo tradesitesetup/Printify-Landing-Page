@@ -5,45 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TradeSiteSetup - Custom Merch Made Easy for Small Businesses</title>
-    /* Modal Background */
-.modal-overlay {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 2000;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Modal Box */
-.modal-content {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    max-width: 500px;
-    width: 90%;
-    position: relative;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    animation: fadeIn 0.3s ease;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--text-light);
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
     <style>
         * {
             margin: 0;
@@ -927,7 +888,7 @@
                 <p class="section-subtitle">Select products, choose quantities, upload logos, and submit for quote</p>
 
                 <div class="product-catalog">
-                    <div class="catalog-item" data-product-id="tote-bag" onclick="openProductModal('Custom Tote Bag', 'This heavy-duty canvas tote is perfect for your brand. Durable, eco-friendly, and printed in high resolution.')">
+                    <div class="catalog-item" data-product-id="tote-bag">
                         <div class="product-carousel">
                             <div class="carousel-container" id="carousel-tote-bag">
                                 <img src="https://printify.com/cdn-cgi/image/width=520,quality=100,format=avif/https://images.printify.com/api/catalog/6883649c0e14ddc83f0e6bb2" alt="Tote Bag" class="catalog-image">
@@ -950,7 +911,7 @@
                         </div>
                     </div>
 
-                    <div class="catalog-item" data-product-id="hoodie" onclick="openProductModal('Premium Hoodie', 'Our softest fleece-lined hoodie. Features a modern fit and holds color perfectly through every wash.')">
+                    <div class="catalog-item" data-product-id="hoodie">
                         <div class="product-carousel">
                             <div class="carousel-container" id="carousel-hoodie">
                                 <img src="https://printify.com/cdn-cgi/image/width=520,quality=100,format=avif/https://images.printify.com/api/catalog/688c5f2f506dbc9480008852" alt="Hoodie" class="catalog-image">
@@ -973,7 +934,7 @@
                         </div>
                     </div>
 
-                    <div class="catalog-item" data-product-id="t-shirt" onclick="openProductModal('Essential Crewneck Tee', '100% ring-spun cotton for a super soft feel. Pre-shrunk to maintain its shape and fit wash after wash.')">
+                    <div class="catalog-item" data-product-id="tshirt">
                         <div class="product-carousel">
                             <div class="carousel-container" id="carousel-tshirt">
                                 <img src="https://printify.com/cdn-cgi/image/width=520,quality=100,format=avif/https://images.printify.com/api/catalog/688c5e3f1ef3ab8714007202" alt="T-Shirt" class="catalog-image">
@@ -996,7 +957,7 @@
                         </div>
                     </div>
 
-                    <div class="catalog-item" data-product-id="mug" onclick="openProductModal('Ceramic Business Mug', '11oz high-gloss ceramic. Microwave and dishwasher safe. Your logo will be printed on both sides for maximum visibility.')">
+                    <div class="catalog-item" data-product-id="mug">
                         <div class="product-carousel">
                             <div class="carousel-container" id="carousel-mug">
                                 <img src="https://printify.com/cdn-cgi/image/width=520,quality=100,format=avif/https://images.printify.com/api/catalog/66d94d839bd43b3eac03ded2" alt="Ceramic Mug" class="catalog-image">
@@ -1019,7 +980,7 @@
                         </div>
                     </div>
 
-                    <div class="catalog-item" data-product-id="socks" onclick="openProductModal('Business Casual Crew Socks', 'Premium knit socks with reinforced heels and toes. Comfortable enough for the office, durable enough for the weekend. Perfect for a subtle brand touch.')">
+                    <div class="catalog-item" data-product-id="socks">
                         <div class="product-carousel">
                             <div class="carousel-container" id="carousel-socks">
                                 <img src="https://printify.com/cdn-cgi/image/width=520,quality=100,format=avif/https://images.printify.com/api/catalog/66d947dc66ff46a28c00e4f5" alt="Sublimation Socks" class="catalog-image">
@@ -1042,7 +1003,7 @@
                         </div>
                     </div>
 
-                    <div class="catalog-item" data-product-id="mixing-glass" onclick="openProductModal('Professional Bar Mixing Glass', 'Heavy-walled glass designed for durability and temperature retention. Features a seamless interior and a weighted base for effortless stirring.')">
+                    <div class="catalog-item" data-product-id="mixing-glass">
                         <div class="product-carousel">
                             <div class="carousel-container" id="carousel-mixing-glass">
                                 <img src="https://printify.com/cdn-cgi/image/width=520,quality=100,format=avif/https://images.printify.com/api/catalog/67e3fd86102ecfea07013902" alt="Mixing Glass" class="catalog-image">
@@ -1065,7 +1026,7 @@
                         </div>
                     </div>
 
-                    <div class="catalog-item" data-product-id="wine-glass" onclick="openProductModal('Stemmed Wine Glass', 'Elegant and timeless 12oz glass. Laser-etched for a permanent, dishwasher-safe design that adds a touch of class to any corporate event or gift.')">
+                    <div class="catalog-item" data-product-id="wine-glass">
                         <div class="product-carousel">
                             <div class="carousel-container" id="carousel-wine-glass">
                                 <img src="https://printify.com/cdn-cgi/image/width=520,quality=100,format=avif/https://images.printify.com/api/catalog/6847f7f5122b6e85570653f2" alt="Stemless Wine Glass" class="catalog-image">
@@ -1507,22 +1468,6 @@
         });
     }
 }
-        function openProductModal(name, description) {
-    document.getElementById('modalTitle').innerText = name;
-    document.getElementById('modalDescription').innerText = description;
-    document.getElementById('productModal').style.display = 'flex';
-}
-
-function closeModal() {
-    document.getElementById('productModal').style.display = 'none';
-}
     </script>
-    <div id="productModal" class="modal-overlay" onclick="closeModal()">
-    <div class="modal-content" onclick="event.stopPropagation()">
-        <span class="close-btn" onclick="closeModal()">&times;</span>
-        <h2 id="modalTitle">Product Name</h2>
-        <div id="modalDescription">Product description goes here...</div>
-    </div>
-</div>
 </body>
 </html>
